@@ -1,0 +1,4 @@
+# This file is used internally by FFMPEG.
+file 'file:/home/lkulon/chemmanimpres/media/videos/01_title/480p15/partial_movie_files/IntroSlide/1584795214_504727987_223132457.mp4'
+file 'file:/home/lkulon/chemmanimpres/media/videos/01_title/480p15/partial_movie_files/IntroSlide/4072820271_9733803_187704855.mp4'
+file 'file:/home/lkulon/chemmanimpres/media/videos/01_title/480p15/partial_movie_files/IntroSlide/4072820271_485911007_2358810818.mp4'
