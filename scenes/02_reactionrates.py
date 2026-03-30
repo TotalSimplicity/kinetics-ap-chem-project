@@ -12,9 +12,7 @@ class ReactionRates(Slide):
         self.play(Write(title))
         self.next_slide()
 
-        # Move title to top left and keep it there!
         self.play(title.animate.shift(UP * 3.5 + LEFT * 4.6).scale(0.7))
-        self.next_slide()
 
         # =========================
         # SLIDE 1: The Basics
@@ -31,20 +29,19 @@ class ReactionRates(Slide):
         # =========================
         # SLIDE 2: The Math (WITH TANGENT GRAPH)
         # =========================
-        # Fade out everything EXCEPT the main title
         self.play(FadeOut(*self.mobjects[1:]))
 
-        math_title = Text("Calculating Rate", color=YELLOW).shift(UP * 2.5)
+        math_title = Text("Calculating Rate", color=YELLOW).shift(UP)
         rate_eq = MathTex(
             r"\text{Rate} = -\text{slope of tangent} = -\frac{\Delta[\text{Reactant}]}{\Delta t}",
-            font_size=40,  # Scaled down slightly to fit graph
+            font_size=40,
         ).next_to(math_title, DOWN, buff=0.3)
 
         self.play(FadeIn(math_title))
         self.play(Write(rate_eq))
 
-        # --- NEW GRAPH CODE ---
-        # 1. Create Axes
+        self.next_slide()
+
         axes = Axes(
             x_range=[0, 5, 1],
             y_range=[0, 5, 1],
@@ -60,7 +57,7 @@ class ReactionRates(Slide):
         curve_label = (
             Text("Reactant", font_size=24, color=BLUE).next_to(curve, RIGHT).shift(UP)
         )
-        self.play(math_title.animate.shift(UP * 10), rate_eq.animate.shift(UP))
+        self.play(math_title.animate.shift(UP * 10), rate_eq.animate.shift(UP * 2.5))
         self.play(Create(axes), Write(labels))
         self.play(Create(curve), FadeIn(curve_label))
         self.next_slide()
@@ -152,3 +149,64 @@ class ReactionRates(Slide):
         self.next_slide()
 
         heat_text.clear_updaters()
+        # =========================
+        # SLIDE 5: Collision Theory
+        # =========================
+        self.play(FadeOut(*self.mobjects[1:]))
+
+        collision_title = Text("Collision Theory", color=YELLOW).shift(UP * 2.5)
+
+        collision_bullets = (
+            VGroup(
+                Text("• Particles must collide to react.", font_size=36),
+                Text("• Require sufficient energy (Activation Energy).", font_size=36),
+                Text("• Molecules must have the proper orientation.", font_size=36),
+                Text(
+                    '➔ Results in an "Effective Collision"', font_size=36, color=GREEN_C
+                ),
+            )
+            .arrange(DOWN, aligned_edge=LEFT, buff=0.4)
+            .next_to(collision_title, DOWN, buff=0.5)
+        )
+
+        self.play(FadeIn(collision_title))
+        self.play(Write(collision_bullets), run_time=7)
+        self.next_slide()
+
+        # Visualizing an Effective Collision
+        particle_a = Circle(radius=0.5, color=BLUE, fill_opacity=0.8).shift(
+            LEFT * 4 + DOWN * 2.25
+        )
+        particle_b = Circle(radius=0.5, color=RED, fill_opacity=0.8).shift(
+            RIGHT * 4 + DOWN * 2.25
+        )
+
+        a_label = Text("A", font_size=24).move_to(particle_a.get_center())
+        b_label = Text("B", font_size=24).move_to(particle_b.get_center())
+
+        group_a = VGroup(particle_a, a_label)
+        group_b = VGroup(particle_b, b_label)
+
+        self.play(FadeIn(group_a), FadeIn(group_b))
+
+        # Animate particles crashing into each other
+        self.play(
+            group_a.animate.shift(RIGHT * 3.5),
+            group_b.animate.shift(LEFT * 3.5),
+            rate_func=rush_into,
+            run_time=0.8,
+        )
+
+        # The reaction (effective collision)
+        flash = Star(color=YELLOW, outer_radius=1.2, inner_radius=0.6).shift(
+            DOWN * 2.25
+        )
+        product = Circle(radius=0.7, color=PURPLE, fill_opacity=0.8).shift(DOWN * 2.25)
+        ab_label = Text("AB", font_size=28).move_to(product.get_center())
+        group_product = VGroup(product, ab_label)
+
+        self.play(
+            FadeIn(flash, scale=0.5), FadeOut(group_a), FadeOut(group_b), run_time=0.1
+        )
+        self.play(Transform(flash, group_product), run_time=0.5)
+        self.next_slide()
