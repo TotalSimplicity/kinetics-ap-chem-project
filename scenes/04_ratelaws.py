@@ -67,14 +67,12 @@ class RateLawsAndHalfLives(Slide):
 
         orders_table_data = [
             ["Order", "Effect of Doubling [A]", "Example"],
-            ["Zero (m=0)", "No change in rate", r"Rate = k"],
+            ["Zero (m=0)", "No change in rate (×1)", r"Rate = k"],
             ["First (m=1)", "Rate doubles (×2)", r"Rate = k[A]"],
             ["Second (m=2)", "Rate quadruples (×4)", r"Rate = k[A]^2"],
         ]
 
-        # Build table as a VGroup of rows
         col_widths = [2.8, 4.2, 3.0]
-        header_colors = [YELLOW, YELLOW, YELLOW]
         rows = []
         for r_idx, row in enumerate(orders_table_data):
             row_group = VGroup()
@@ -100,7 +98,6 @@ class RateLawsAndHalfLives(Slide):
             VGroup(*rows).arrange(DOWN, buff=0.35).next_to(orders_title, DOWN, buff=0.5)
         )
 
-        # Header underline
         underline = Line(
             table_group[0].get_left() + LEFT * 0.2,
             table_group[0].get_right() + RIGHT * 0.2,
@@ -120,14 +117,122 @@ class RateLawsAndHalfLives(Slide):
         self.play(Write(overall_note))
         self.next_slide()
 
-        # =========================
-        # SLIDE 3: Units of k
-        # =========================
+        # ==========================================
+        # SLIDE 3: Method of Initial Rates (NEW)
+        # ==========================================
         self.play(
             FadeOut(orders_title),
             FadeOut(table_group),
             FadeOut(underline),
             FadeOut(overall_note),
+        )
+
+        initial_rates_title = Text(
+            "Determining Orders from Data", font_size=40, color=YELLOW
+        ).next_to(title, DOWN, buff=0.4)
+        self.play(Write(initial_rates_title))
+
+        # Built-in Manim Table
+        data_table = (
+            Table(
+                [
+                    ["0.10", "0.10", "0.002"],
+                    ["0.20", "0.10", "0.004"],
+                    ["0.10", "0.20", "0.008"],
+                ],
+                row_labels=[
+                    Text("Exp 1", font_size=24),
+                    Text("Exp 2", font_size=24),
+                    Text("Exp 3", font_size=24),
+                ],
+                col_labels=[
+                    Text("[A] (M)", font_size=24),
+                    Text("[B] (M)", font_size=24),
+                    Text("Initial Rate (M/s)", font_size=24),
+                ],
+                include_outer_lines=True,
+                v_buff=0.4,
+                h_buff=0.8,
+            )
+            .scale(0.6)
+            .next_to(initial_rates_title, DOWN, buff=0.4)
+        )
+
+        self.play(Create(data_table))
+
+        # A Order Explanation
+        a_highlight = data_table.get_rows()[1:3]  # Exp 1 and 2
+        a_rect = SurroundingRectangle(a_highlight, color=GREEN_C, buff=0.1)
+
+        a_explanation = (
+            VGroup(
+                Text("Exp 1 → Exp 2: [B] is constant.", font_size=20),
+                Text(
+                    "[A] doubles (×2), Rate doubles (×2).", font_size=20, color=GREEN_C
+                ),
+                MathTex(
+                    r"2^m = 2 \implies m = 1 \text{ (First Order in A)}",
+                    font_size=24,
+                    color=GREEN_C,
+                ),
+            )
+            .arrange(DOWN, aligned_edge=LEFT)
+            .next_to(data_table, DOWN, buff=0.3)
+            .align_to(data_table, LEFT)
+        )
+
+        self.play(Create(a_rect))
+        self.play(Write(a_explanation))
+        self.next_slide()
+
+        # B Order Explanation
+        self.play(FadeOut(a_rect), FadeOut(a_explanation))
+
+        b_highlight_1 = data_table.get_rows()[1]  # Exp 1
+        b_highlight_2 = data_table.get_rows()[3]  # Exp 3
+        b_rect_1 = SurroundingRectangle(b_highlight_1, color=BLUE_B, buff=0.1)
+        b_rect_2 = SurroundingRectangle(b_highlight_2, color=BLUE_B, buff=0.1)
+
+        b_explanation = (
+            VGroup(
+                Text("Exp 1 → Exp 3: [A] is constant.", font_size=20),
+                Text(
+                    "[B] doubles (×2), Rate quadruples (×4).",
+                    font_size=20,
+                    color=BLUE_B,
+                ),
+                MathTex(
+                    r"2^n = 4 \implies n = 2 \text{ (Second Order in B)}",
+                    font_size=24,
+                    color=BLUE_B,
+                ),
+            )
+            .arrange(DOWN, aligned_edge=LEFT)
+            .next_to(data_table, DOWN, buff=0.3)
+            .align_to(data_table, LEFT)
+        )
+
+        self.play(Create(b_rect_1), Create(b_rect_2))
+        self.play(Write(b_explanation))
+
+        final_rate_law = MathTex(
+            r"\text{Rate} = k[A]^1[B]^2", font_size=36, color=YELLOW
+        ).next_to(b_explanation, RIGHT, buff=1.0)
+        final_rate_box = SurroundingRectangle(final_rate_law, color=YELLOW)
+        self.play(Write(final_rate_law), Create(final_rate_box))
+        self.next_slide()
+
+        # =========================
+        # SLIDE 4: Units of k
+        # =========================
+        self.play(
+            FadeOut(initial_rates_title),
+            FadeOut(data_table),
+            FadeOut(b_rect_1),
+            FadeOut(b_rect_2),
+            FadeOut(b_explanation),
+            FadeOut(final_rate_law),
+            FadeOut(final_rate_box),
         )
 
         k_title = Text("Units of k", font_size=40, color=YELLOW).next_to(
@@ -142,11 +247,11 @@ class RateLawsAndHalfLives(Slide):
                     font_size=32,
                 ),
                 MathTex(
-                    r"\text{First order:} \quad k \text{ has units } \frac{1}{s}",
+                    r"\text{First order:} \quad k \text{ has units } \frac{1}{s} \text{ or } s^{-1}",
                     font_size=32,
                 ),
                 MathTex(
-                    r"\text{Second order:} \quad k \text{ has units } \frac{1}{M \cdot s}",
+                    r"\text{Second order:} \quad k \text{ has units } \frac{1}{M \cdot s} \text{ or } M^{-1}s^{-1}",
                     font_size=32,
                 ),
             )
@@ -165,7 +270,7 @@ class RateLawsAndHalfLives(Slide):
         self.next_slide()
 
         # ================================
-        # SLIDE 4: Integrated Rate Laws
+        # SLIDE 5: Integrated Rate Laws
         # ================================
         self.play(FadeOut(k_title), FadeOut(k_bullets), FadeOut(k_note), FadeOut(title))
 
@@ -216,7 +321,7 @@ class RateLawsAndHalfLives(Slide):
         self.next_slide()
 
         # ================================
-        # SLIDE 5: Linear Plot Forms
+        # SLIDE 6: Linear Plot Forms
         # ================================
         self.play(FadeOut(irl_intro), FadeOut(irl_equations), FadeOut(var_note))
 
@@ -230,17 +335,17 @@ class RateLawsAndHalfLives(Slide):
                 VGroup(
                     Text("Zero:", font_size=24, color=RED),
                     MathTex(r"[A]_t = -kt + [A]_0", font_size=28),
-                    Text("  →  Plot [A]  vs  t", font_size=22, color=GRAY_B),
+                    Text("  →  Plot [A] vs t", font_size=22, color=GRAY_B),
                 ).arrange(RIGHT, buff=0.3),
                 VGroup(
                     Text("First:", font_size=24, color=GREEN_C),
                     MathTex(r"\ln[A]_t = -kt + \ln[A]_0", font_size=28),
-                    Text("  →  Plot ln[A]  vs  t", font_size=22, color=GRAY_B),
+                    Text("  →  Plot ln[A] vs t", font_size=22, color=GRAY_B),
                 ).arrange(RIGHT, buff=0.3),
                 VGroup(
                     Text("Second:", font_size=24, color=BLUE_B),
                     MathTex(r"\frac{1}{[A]_t} = kt + \frac{1}{[A]_0}", font_size=28),
-                    Text("  →  Plot 1/[A]  vs  t", font_size=22, color=GRAY_B),
+                    Text("  →  Plot 1/[A] vs t", font_size=22, color=GRAY_B),
                 ).arrange(RIGHT, buff=0.3),
             )
             .arrange(DOWN, aligned_edge=LEFT, buff=0.45)
@@ -260,7 +365,7 @@ class RateLawsAndHalfLives(Slide):
         self.next_slide()
 
         # ================================
-        # SLIDE 6: Concentration vs Time Graphs
+        # SLIDE 7: Concentration vs Time Graphs
         # ================================
         self.play(FadeOut(linear_title), FadeOut(linear_rows), FadeOut(linear_note))
 
@@ -316,6 +421,7 @@ class RateLawsAndHalfLives(Slide):
             .arrange(RIGHT, buff=0.6)
             .next_to(graph_title, DOWN, buff=0.5)
         )
+
         self.play(
             Create(ax0),
             Create(ax1),
@@ -333,7 +439,7 @@ class RateLawsAndHalfLives(Slide):
         self.play(Create(curve0), Create(curve1), Create(curve2))
 
         shape_note = Text(
-            "Only zero order is a straight line on a [A] vs t plot.",
+            "Notice how [A] vs t curves for First and Second orders.",
             font_size=22,
             color=GRAY_B,
         ).next_to(all_graphs, DOWN, buff=0.4)
@@ -341,12 +447,103 @@ class RateLawsAndHalfLives(Slide):
         self.next_slide()
 
         # ================================
-        # SLIDE 7: Half-Lives
+        # SLIDE 8: Linearized Plot Graphs (NEW)
+        # ================================
+        self.play(FadeOut(graph_title), FadeOut(all_graphs), FadeOut(shape_note))
+
+        linear_graph_title = Text(
+            "The Linearized Plots", font_size=38, color=YELLOW
+        ).next_to(title2, DOWN, buff=0.4)
+        self.play(Write(linear_graph_title))
+
+        # --- Linear Zero Order ---
+        ax_lin0 = Axes(**ax_cfg)
+        lbl_lin0_x = ax_lin0.get_x_axis_label("t", direction=DOWN, buff=0.5)
+        lbl_lin0_y = ax_lin0.get_y_axis_label("[A]", direction=LEFT, buff=0.5)
+        curve_lin0 = ax_lin0.plot(
+            lambda x: max(2.5 - 0.5 * x, 0), x_range=[0, 5], color=RED
+        )
+        title_lin0 = (
+            VGroup(
+                Text("Zero Order", font_size=20, color=RED),
+                Text("Slope = -k", font_size=16),
+            )
+            .arrange(DOWN, buff=0.1)
+            .next_to(ax_lin0, DOWN, buff=0.15)
+        )
+        g_lin0 = VGroup(ax_lin0, lbl_lin0_x, lbl_lin0_y, curve_lin0, title_lin0)
+
+        # --- Linear First Order ---
+        ax_lin1 = Axes(**ax_cfg)
+        lbl_lin1_x = ax_lin1.get_x_axis_label("t", direction=DOWN, buff=0.5)
+        lbl_lin1_y = ax_lin1.get_y_axis_label("ln[A]", direction=LEFT, buff=0.5)
+        curve_lin1 = ax_lin1.plot(
+            lambda x: max(2.5 - 0.5 * x, 0), x_range=[0, 5], color=GREEN_C
+        )  # Drawn straight to represent ln[A]
+        title_lin1 = (
+            VGroup(
+                Text("First Order", font_size=20, color=GREEN_C),
+                Text("Slope = -k", font_size=16),
+            )
+            .arrange(DOWN, buff=0.1)
+            .next_to(ax_lin1, DOWN, buff=0.15)
+        )
+        g_lin1 = VGroup(ax_lin1, lbl_lin1_x, lbl_lin1_y, curve_lin1, title_lin1)
+
+        # --- Linear Second Order ---
+        ax_lin2 = Axes(**ax_cfg)
+        lbl_lin2_x = ax_lin2.get_x_axis_label("t", direction=DOWN, buff=0.5)
+        lbl_lin2_y = ax_lin2.get_y_axis_label("1/[A]", direction=LEFT, buff=0.5)
+        curve_lin2 = ax_lin2.plot(
+            lambda x: 0.5 + 0.5 * x, x_range=[0, 5], color=BLUE_B
+        )  # Drawn straight to represent 1/[A]
+        title_lin2 = (
+            VGroup(
+                Text("Second Order", font_size=20, color=BLUE_B),
+                Text("Slope = +k", font_size=16),
+            )
+            .arrange(DOWN, buff=0.1)
+            .next_to(ax_lin2, DOWN, buff=0.15)
+        )
+        g_lin2 = VGroup(ax_lin2, lbl_lin2_x, lbl_lin2_y, curve_lin2, title_lin2)
+
+        all_lin_graphs = (
+            VGroup(g_lin0, g_lin1, g_lin2)
+            .arrange(RIGHT, buff=0.6)
+            .next_to(linear_graph_title, DOWN, buff=0.5)
+        )
+
+        self.play(
+            Create(ax_lin0),
+            Create(ax_lin1),
+            Create(ax_lin2),
+            Write(lbl_lin0_x),
+            Write(lbl_lin0_y),
+            Write(lbl_lin1_x),
+            Write(lbl_lin1_y),
+            Write(lbl_lin2_x),
+            Write(lbl_lin2_y),
+            Write(title_lin0),
+            Write(title_lin1),
+            Write(title_lin2),
+        )
+        self.play(Create(curve_lin0), Create(curve_lin1), Create(curve_lin2))
+
+        lin_shape_note = Text(
+            "Plotting these transformations identifies the correct reaction order.",
+            font_size=22,
+            color=GRAY_B,
+        ).next_to(all_lin_graphs, DOWN, buff=0.4)
+        self.play(FadeIn(lin_shape_note))
+        self.next_slide()
+
+        # ================================
+        # SLIDE 9: Half-Lives
         # ================================
         self.play(
-            FadeOut(graph_title),
-            FadeOut(all_graphs),
-            FadeOut(shape_note),
+            FadeOut(linear_graph_title),
+            FadeOut(all_lin_graphs),
+            FadeOut(lin_shape_note),
             FadeOut(title2),
         )
 
@@ -362,7 +559,7 @@ class RateLawsAndHalfLives(Slide):
         hl_formula_group = (
             VGroup(
                 MathTex(
-                    r"t_{1/2} = \frac{\ln 2}{k} = \frac{0.693}{k}",
+                    r"t_{1/2} = \frac{\ln 2}{k} \approx \frac{0.693}{k}",
                     font_size=44,
                     color=GREEN_C,
                 ),
@@ -389,7 +586,7 @@ class RateLawsAndHalfLives(Slide):
                 ),
                 Text("• All radioactive decay is first order.", font_size=26),
                 Text(
-                    "  length, or starting/final mass — find the missing value.",
+                    "  (Often used to solve for remaining mass or elapsed time)",
                     font_size=24,
                     color=GRAY_B,
                 ),
@@ -402,7 +599,7 @@ class RateLawsAndHalfLives(Slide):
         self.next_slide()
 
         # ================================
-        # SLIDE 8: Half-Life Graph (First Order)
+        # SLIDE 10: Half-Life Graph (First Order)
         # ================================
         self.play(
             FadeOut(hl_def),
@@ -438,7 +635,6 @@ class RateLawsAndHalfLives(Slide):
         self.play(Create(hl_ax), Write(hl_x_lbl), Write(hl_y_lbl))
         self.play(Create(decay_curve))
 
-        # Mark half-life points at t = 0, ~1.39, ~2.77, ~4.16
         hl_time = np.log(2) / k_val  # ≈ 1.386
         hl_points = []
         hl_dashed_lines = []
@@ -489,7 +685,7 @@ class RateLawsAndHalfLives(Slide):
         self.next_slide()
 
         # ================================
-        # SLIDE 9: Summary
+        # SLIDE 11: Summary
         # ================================
         self.play(
             FadeOut(hl_graph_title),

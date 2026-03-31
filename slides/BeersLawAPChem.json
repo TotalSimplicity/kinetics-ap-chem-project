@@ -1,0 +1,81 @@
+{
+  "slides": [
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/BeersLawAPChem/a07df0f7528815bd82868de221f7840255f88acb443f141a8a130508d4bb1ff2.mp4",
+      "rev_file": "slides/files/BeersLawAPChem/a07df0f7528815bd82868de221f7840255f88acb443f141a8a130508d4bb1ff2_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/BeersLawAPChem/cb733dca53a243f9df397e8e64aacb7b501a4d590aed9f54eb9d14b82cfbb301.mp4",
+      "rev_file": "slides/files/BeersLawAPChem/cb733dca53a243f9df397e8e64aacb7b501a4d590aed9f54eb9d14b82cfbb301_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/BeersLawAPChem/158a2ddafe129261dc5f1e92defe9cb347e79515345fcb1b938aef60068dc4ef.mp4",
+      "rev_file": "slides/files/BeersLawAPChem/158a2ddafe129261dc5f1e92defe9cb347e79515345fcb1b938aef60068dc4ef_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/BeersLawAPChem/399a4444c42c086ea847c250a04ac42cb8cbdb66c08a5d0be066add674b240be.mp4",
+      "rev_file": "slides/files/BeersLawAPChem/399a4444c42c086ea847c250a04ac42cb8cbdb66c08a5d0be066add674b240be_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/BeersLawAPChem/1c913b39d878cca536a24e5660170331eb517f2bf17595dc91f7f61506463957.mp4",
+      "rev_file": "slides/files/BeersLawAPChem/1c913b39d878cca536a24e5660170331eb517f2bf17595dc91f7f61506463957_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/BeersLawAPChem/960803aa767e5db1f5acbaaac26c6382f03e305b2b7d0c6afa8a44d492748f45.mp4",
+      "rev_file": "slides/files/BeersLawAPChem/960803aa767e5db1f5acbaaac26c6382f03e305b2b7d0c6afa8a44d492748f45_reversed.mp4"
+    }
+  ],
+  "resolution": [
+    1920,
+    1080
+  ],
+  "background_color": "#2b3a42"
+}
