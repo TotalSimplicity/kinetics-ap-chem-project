@@ -136,10 +136,10 @@ class CatalystsAndDiagrams(Slide):
 
         # Mathematical functions for Endothermic graph (flip the step)
         def endo_uncatalyzed(x):
-            return 3 + 4 * np.exp(-((x - 3) ** 2)) + 4 / (1 + np.exp(-2 * (x - 4)))
+            return 3 + 6 * np.exp(-((x - 3) ** 2)) + 4 / (1 + np.exp(-2 * (x - 4)))
 
         def endo_catalyzed(x):
-            return 3 + 1.8 * np.exp(-((x - 3) ** 2)) + 4 / (1 + np.exp(-2 * (x - 4)))
+            return 3 + 4 * np.exp(-((x - 3) ** 2)) + 4 / (1 + np.exp(-2 * (x - 4)))
 
         self.play(Create(axes2), Write(labels2), Write(t2_label))
 
