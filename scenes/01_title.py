@@ -13,6 +13,6 @@ class Title(Slide):
         self.play(Write(title))
         self.play(FadeIn(subtitle, shift=UP))
 
-        self.next_slide()
+        self.next_slide(auto_next=True)
 
         self.play(FadeOut(title, subtitle))

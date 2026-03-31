@@ -87,7 +87,7 @@ class CatalystsAndDiagrams(Slide):
         peak_x = 2.85
         ts_dot1 = Dot(axes1.c2p(peak_x, exo_uncatalyzed(peak_x)), color=YELLOW)
         ts_lbl1 = Text(
-            "TS (Uncat)",
+            "Transition State",
             font_size=16,
             color=YELLOW,
         ).next_to(ts_dot1, UP * 0.4)
@@ -96,8 +96,10 @@ class CatalystsAndDiagrams(Slide):
         # 4. Plot Catalyzed Pathway
         cat_curve1 = axes1.plot(exo_catalyzed, x_range=[0, 8.5], color=GREEN_C)
         cat_lbl1 = Text("Catalyzed", font_size=18, color=GREEN_C).next_to(
-            axes1.c2p(4, exo_catalyzed(4)), DOWN + RIGHT, buff=0.1
+            axes1.c2p(4, exo_catalyzed(4)), DOWN + RIGHT, buff=0.6
         )
+
+        self.next_slide()
         self.play(Create(cat_curve1), FadeIn(cat_lbl1))
 
         # Group all elements of the first graph
@@ -139,7 +141,7 @@ class CatalystsAndDiagrams(Slide):
             return 3 + 6 * np.exp(-((x - 3) ** 2)) + 4 / (1 + np.exp(-2 * (x - 4)))
 
         def endo_catalyzed(x):
-            return 3 + 4 * np.exp(-((x - 3) ** 2)) + 4 / (1 + np.exp(-2 * (x - 4)))
+            return 3 + 5 * np.exp(-((x - 3) ** 2)) + 4 / (1 + np.exp(-2 * (x - 4)))
 
         self.play(Create(axes2), Write(labels2), Write(t2_label))
 

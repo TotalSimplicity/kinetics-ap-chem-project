@@ -9,8 +9,8 @@
       "dedent_notes": true,
       "skip_animations": false,
       "src": null,
-      "file": "slides/files/CatalystsAndDiagrams/969b3f88d98df83b9fbb48fc93d9c7829009ea82cfad178e8a6afbfac09c6d38.mp4",
-      "rev_file": "slides/files/CatalystsAndDiagrams/969b3f88d98df83b9fbb48fc93d9c7829009ea82cfad178e8a6afbfac09c6d38_reversed.mp4"
+      "file": "slides/files/CatalystsAndDiagrams/5c8634478bb13f713c2c2c058470bfc7d7fa541e10f0388d333dcf23fb773f2a.mp4",
+      "rev_file": "slides/files/CatalystsAndDiagrams/5c8634478bb13f713c2c2c058470bfc7d7fa541e10f0388d333dcf23fb773f2a_reversed.mp4"
     },
     {
       "loop": false,
@@ -21,8 +21,8 @@
       "dedent_notes": true,
       "skip_animations": false,
       "src": null,
-      "file": "slides/files/CatalystsAndDiagrams/788342c72ae02fddaa33c6315c2026d3c7c724933345e3cf93afdcf07b3d43a4.mp4",
-      "rev_file": "slides/files/CatalystsAndDiagrams/788342c72ae02fddaa33c6315c2026d3c7c724933345e3cf93afdcf07b3d43a4_reversed.mp4"
+      "file": "slides/files/CatalystsAndDiagrams/3ab231bdf20172761517b25397a8a2268603d45406102676b9bd45f0b0b733ae.mp4",
+      "rev_file": "slides/files/CatalystsAndDiagrams/3ab231bdf20172761517b25397a8a2268603d45406102676b9bd45f0b0b733ae_reversed.mp4"
     },
     {
       "loop": false,
@@ -33,8 +33,8 @@
       "dedent_notes": true,
       "skip_animations": false,
       "src": null,
-      "file": "slides/files/CatalystsAndDiagrams/6c91181b59a98a545ca737f4f9061149d5a188e3b6bb3cdc472adcda58e29355.mp4",
-      "rev_file": "slides/files/CatalystsAndDiagrams/6c91181b59a98a545ca737f4f9061149d5a188e3b6bb3cdc472adcda58e29355_reversed.mp4"
+      "file": "slides/files/CatalystsAndDiagrams/6d8e68ef401991a5fe165a5b414d89d404febdfe2b4dc8efed82341caeda6064.mp4",
+      "rev_file": "slides/files/CatalystsAndDiagrams/6d8e68ef401991a5fe165a5b414d89d404febdfe2b4dc8efed82341caeda6064_reversed.mp4"
     },
     {
       "loop": false,
@@ -45,8 +45,8 @@
       "dedent_notes": true,
       "skip_animations": false,
       "src": null,
-      "file": "slides/files/CatalystsAndDiagrams/013485ebe8be7c2d7ec43894447b0814d82063eb68de158cdfdeb3ef60f78910.mp4",
-      "rev_file": "slides/files/CatalystsAndDiagrams/013485ebe8be7c2d7ec43894447b0814d82063eb68de158cdfdeb3ef60f78910_reversed.mp4"
+      "file": "slides/files/CatalystsAndDiagrams/1b394a241608a851109c109ada4c636357de024b11c57ead0508afe423b6b3ab.mp4",
+      "rev_file": "slides/files/CatalystsAndDiagrams/1b394a241608a851109c109ada4c636357de024b11c57ead0508afe423b6b3ab_reversed.mp4"
     },
     {
       "loop": false,
@@ -57,13 +57,25 @@
       "dedent_notes": true,
       "skip_animations": false,
       "src": null,
-      "file": "slides/files/CatalystsAndDiagrams/55eb65f7ae521a4304120ac48beaed3870858cd422e662d9b59f4e5e768143e4.mp4",
-      "rev_file": "slides/files/CatalystsAndDiagrams/55eb65f7ae521a4304120ac48beaed3870858cd422e662d9b59f4e5e768143e4_reversed.mp4"
+      "file": "slides/files/CatalystsAndDiagrams/d7994a614b0bc8fe69c068805b86757e02586097b7366db5da9cb373529eaa8c.mp4",
+      "rev_file": "slides/files/CatalystsAndDiagrams/d7994a614b0bc8fe69c068805b86757e02586097b7366db5da9cb373529eaa8c_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/CatalystsAndDiagrams/74bca9611641400d86860acbabdb4ef8968db222b418401fcdb0f4b12030ac54.mp4",
+      "rev_file": "slides/files/CatalystsAndDiagrams/74bca9611641400d86860acbabdb4ef8968db222b418401fcdb0f4b12030ac54_reversed.mp4"
     }
   ],
   "resolution": [
-    854,
-    480
+    1920,
+    1080
   ],
   "background_color": "#2b3a42"
 }

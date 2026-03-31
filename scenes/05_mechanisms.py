@@ -21,7 +21,10 @@ class ReactionMechanisms(Slide):
         self.play(Write(title))
 
         self.next_slide()
-        self.play(title.animate.shift(UP * 2), blake.animate.scale(0.5, about_edge=DR))
+        self.play(
+            title.animate.shift(UP * 2).scale(0.7),
+            blake.animate.scale(0.5, about_edge=DR),
+        )
         why_bullets = (
             VGroup(
                 Text(
@@ -328,8 +331,8 @@ class ReactionMechanisms(Slide):
         # --- Zero Order ---
         ax0 = Axes(**ax_cfg)
         c0 = ax0.plot(lambda x: 3.0, x_range=[0.1, 4.9], color=RED)
-        lbl0_x = ax0.get_x_axis_label("[A]", direction=DOWN)
-        lbl0_y = ax0.get_y_axis_label("Rate", direction=LEFT)
+        lbl0_x = ax0.get_x_axis_label("[A]", direction=DOWN, buff=0.6)
+        lbl0_y = ax0.get_y_axis_label("Rate", direction=LEFT, buff=0.3)
         t0 = Text("Zero Order", font_size=20, color=RED).next_to(ax0, DOWN, buff=0.1)
         note0 = Text("Rate = k\nNo effect", font_size=17, color=GRAY_B).next_to(
             t0, DOWN, buff=0.1
@@ -339,8 +342,8 @@ class ReactionMechanisms(Slide):
         # --- First Order ---
         ax1 = Axes(**ax_cfg)
         c1 = ax1.plot(lambda x: 1.1 * x, x_range=[0.1, 4.9], color=GREEN_C)
-        lbl1_x = ax1.get_x_axis_label("[A]", direction=DOWN)
-        lbl1_y = ax1.get_y_axis_label("Rate", direction=LEFT)
+        lbl1_x = ax0.get_x_axis_label("[A]", direction=DOWN, buff=0.6)
+        lbl1_y = ax0.get_y_axis_label("Rate", direction=LEFT, buff=0.3)
         t1 = Text("First Order", font_size=20, color=GREEN_C).next_to(
             ax1, DOWN, buff=0.1
         )
@@ -352,8 +355,8 @@ class ReactionMechanisms(Slide):
         # --- Second Order ---
         ax2 = Axes(**ax_cfg)
         c2 = ax2.plot(lambda x: 0.22 * x**2, x_range=[0.1, 4.9], color=BLUE_B)
-        lbl2_x = ax2.get_x_axis_label("[A]", direction=DOWN)
-        lbl2_y = ax2.get_y_axis_label("Rate", direction=LEFT)
+        lbl2_x = ax0.get_x_axis_label("[A]", direction=DOWN, buff=0.6)
+        lbl2_y = ax0.get_y_axis_label("Rate", direction=LEFT, buff=0.3)
         t2 = Text("Second Order", font_size=20, color=BLUE_B).next_to(
             ax2, DOWN, buff=0.1
         )

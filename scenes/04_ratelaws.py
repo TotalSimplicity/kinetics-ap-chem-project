@@ -279,8 +279,8 @@ class RateLawsAndHalfLives(Slide):
 
         # --- Zero Order ---
         ax0 = Axes(**ax_cfg)
-        lbl0_x = ax0.get_x_axis_label("t", direction=DOWN)
-        lbl0_y = ax0.get_y_axis_label("[A]", direction=LEFT)
+        lbl0_x = ax0.get_x_axis_label("t", direction=DOWN, buff=0.5)
+        lbl0_y = ax0.get_y_axis_label("[A]", direction=LEFT, buff=0.5)
         curve0 = ax0.plot(lambda x: max(2.5 - 0.5 * x, 0), x_range=[0, 5], color=RED)
         title0 = Text("Zero Order", font_size=20, color=RED).next_to(
             ax0, DOWN, buff=0.15
@@ -289,8 +289,8 @@ class RateLawsAndHalfLives(Slide):
 
         # --- First Order ---
         ax1 = Axes(**ax_cfg)
-        lbl1_x = ax1.get_x_axis_label("t", direction=DOWN)
-        lbl1_y = ax1.get_y_axis_label("[A]", direction=LEFT)
+        lbl1_x = ax1.get_x_axis_label("t", direction=DOWN, buff=0.5)
+        lbl1_y = ax1.get_y_axis_label("[A]", direction=LEFT, buff=0.5)
         curve1 = ax1.plot(
             lambda x: 2.5 * np.exp(-0.5 * x), x_range=[0, 5], color=GREEN_C
         )
@@ -301,8 +301,8 @@ class RateLawsAndHalfLives(Slide):
 
         # --- Second Order ---
         ax2 = Axes(**ax_cfg)
-        lbl2_x = ax2.get_x_axis_label("t", direction=DOWN)
-        lbl2_y = ax2.get_y_axis_label("[A]", direction=LEFT)
+        lbl2_x = ax2.get_x_axis_label("t", direction=DOWN, buff=0.5)
+        lbl2_y = ax2.get_y_axis_label("[A]", direction=LEFT, buff=0.5)
         curve2 = ax2.plot(
             lambda x: 2.5 / (1 + 2.5 * 0.4 * x), x_range=[0, 5], color=BLUE_B
         )
@@ -372,7 +372,7 @@ class RateLawsAndHalfLives(Slide):
                     color=GRAY_B,
                 ),
             )
-            .arrange(DOWN, buff=0.6)
+            .arrange(DOWN, buff=0.8)
             .next_to(hl_def, DOWN, buff=0.5)
         )
 
@@ -429,8 +429,8 @@ class RateLawsAndHalfLives(Slide):
                 "font_size": 18,
             },
         ).next_to(hl_graph_title, DOWN, buff=0.4)
-        hl_x_lbl = hl_ax.get_x_axis_label("Time (s)", direction=DOWN)
-        hl_y_lbl = hl_ax.get_y_axis_label("[A]", direction=LEFT)
+        hl_x_lbl = hl_ax.get_x_axis_label("Time (s)", direction=DOWN, buff=0.6)
+        hl_y_lbl = hl_ax.get_y_axis_label("[A]", direction=LEFT, buff=0.6)
 
         decay_curve = hl_ax.plot(
             lambda x: A0 * np.exp(-k_val * x), x_range=[0, 9.9], color=GREEN_C
