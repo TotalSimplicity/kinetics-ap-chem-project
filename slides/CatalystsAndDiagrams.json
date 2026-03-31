@@ -1,0 +1,69 @@
+{
+  "slides": [
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/CatalystsAndDiagrams/d73078b802309125d56ff61f919250bbd19b337f0b4613656b5e3a012edb1da0.mp4",
+      "rev_file": "slides/files/CatalystsAndDiagrams/d73078b802309125d56ff61f919250bbd19b337f0b4613656b5e3a012edb1da0_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/CatalystsAndDiagrams/8896967613d1f38c54cda696e2043a0ebd4b57f8ecf47f5d98c04e913fe5e66b.mp4",
+      "rev_file": "slides/files/CatalystsAndDiagrams/8896967613d1f38c54cda696e2043a0ebd4b57f8ecf47f5d98c04e913fe5e66b_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/CatalystsAndDiagrams/511ea305993e80443ff2da4c4c17bcbdf70364f35cc3a0a9eeb72fc63176906d.mp4",
+      "rev_file": "slides/files/CatalystsAndDiagrams/511ea305993e80443ff2da4c4c17bcbdf70364f35cc3a0a9eeb72fc63176906d_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/CatalystsAndDiagrams/2917c351f140ffdc949d3c0e4838db260b6f1b81d949ab05e665c3a41ad9896c.mp4",
+      "rev_file": "slides/files/CatalystsAndDiagrams/2917c351f140ffdc949d3c0e4838db260b6f1b81d949ab05e665c3a41ad9896c_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/CatalystsAndDiagrams/947efde9fb6fb41965b9ee05180c4f259aa27a43b87ae56afac10015c2a85cb6.mp4",
+      "rev_file": "slides/files/CatalystsAndDiagrams/947efde9fb6fb41965b9ee05180c4f259aa27a43b87ae56afac10015c2a85cb6_reversed.mp4"
+    }
+  ],
+  "resolution": [
+    854,
+    480
+  ],
+  "background_color": "#2b3a42"
+}
