@@ -1,0 +1,117 @@
+{
+  "slides": [
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/RateLawsAndHalfLives/31cd393084775b381ffb18d1fd0265874a7ca531f90c2ee97a083db67bddebc9.mp4",
+      "rev_file": "slides/files/RateLawsAndHalfLives/31cd393084775b381ffb18d1fd0265874a7ca531f90c2ee97a083db67bddebc9_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/RateLawsAndHalfLives/6d8709b03adac319b70d3d85400ebe00ff94660a97b08a4767a2f496f7423a12.mp4",
+      "rev_file": "slides/files/RateLawsAndHalfLives/6d8709b03adac319b70d3d85400ebe00ff94660a97b08a4767a2f496f7423a12_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/RateLawsAndHalfLives/80151d4d8768c89c034228b99b3c8f56b3a6b55fd254034308aab7666b2b6473.mp4",
+      "rev_file": "slides/files/RateLawsAndHalfLives/80151d4d8768c89c034228b99b3c8f56b3a6b55fd254034308aab7666b2b6473_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/RateLawsAndHalfLives/80438691dad27f52e04cf2ea6b0051d98620ba10343f757416c651b1b80b4756.mp4",
+      "rev_file": "slides/files/RateLawsAndHalfLives/80438691dad27f52e04cf2ea6b0051d98620ba10343f757416c651b1b80b4756_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/RateLawsAndHalfLives/7dbbdb4caf37c169ebcc516593b5b0a8c9f51e1311a0cd90e8457e6745c8c257.mp4",
+      "rev_file": "slides/files/RateLawsAndHalfLives/7dbbdb4caf37c169ebcc516593b5b0a8c9f51e1311a0cd90e8457e6745c8c257_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/RateLawsAndHalfLives/f065bc3e893e84935ef616bf99495881de512c1036d94f2aac369c3935119ad9.mp4",
+      "rev_file": "slides/files/RateLawsAndHalfLives/f065bc3e893e84935ef616bf99495881de512c1036d94f2aac369c3935119ad9_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/RateLawsAndHalfLives/bbdc775d32c81efe3a70a238203d30db6245e9c932e3c178eb271d57c7866192.mp4",
+      "rev_file": "slides/files/RateLawsAndHalfLives/bbdc775d32c81efe3a70a238203d30db6245e9c932e3c178eb271d57c7866192_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/RateLawsAndHalfLives/54f9a16906ab5b7c3c27a060b8fef986ef1b3978043a0eba5d10b38068d45781.mp4",
+      "rev_file": "slides/files/RateLawsAndHalfLives/54f9a16906ab5b7c3c27a060b8fef986ef1b3978043a0eba5d10b38068d45781_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "skip_animations": false,
+      "src": null,
+      "file": "slides/files/RateLawsAndHalfLives/f2159c748389a9641f35f3bdcb6efed312b39c7daaf4ce8fe8af83caa65e126e.mp4",
+      "rev_file": "slides/files/RateLawsAndHalfLives/f2159c748389a9641f35f3bdcb6efed312b39c7daaf4ce8fe8af83caa65e126e_reversed.mp4"
+    }
+  ],
+  "resolution": [
+    854,
+    480
+  ],
+  "background_color": "#2b3a42"
+}
