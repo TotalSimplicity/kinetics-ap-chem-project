@@ -1,0 +1,4 @@
+# This file is used internally by FFMPEG.
+file 'file:/home/lkulon/Documents/Code/kinetics-ap-chem-project/media/videos/06_final/1080p60/partial_movie_files/Final/308825101_3903924909_223132457.mp4'
+file 'file:/home/lkulon/Documents/Code/kinetics-ap-chem-project/media/videos/06_final/1080p60/partial_movie_files/Final/4289140838_206238064_1729043958.mp4'
+file 'file:/home/lkulon/Documents/Code/kinetics-ap-chem-project/media/videos/06_final/1080p60/partial_movie_files/Final/4289140838_2688965532_3789457294.mp4'
